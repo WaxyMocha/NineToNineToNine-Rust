@@ -1,0 +1,15 @@
+[package]
+name = "NineToNineToNine"
+version = "0.1.0"
+authors = ["Jakub Szymański <jakubmateusz@poczta.onet.pl>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rug = "1.6.0"
+
+[profile.release]
+opt-level = 'z'  # Optimize for size.
+lto = true
+codegen-units = 1
